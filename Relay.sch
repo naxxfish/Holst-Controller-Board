@@ -1,0 +1,285 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:naxxfish-library
+LIBS:freetronics_schematic
+LIBS:MasterControl-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 11 12
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MOSFET_N Q1
+U 1 1 558B6FC5
+P 6300 2350
+F 0 "Q1" H 6210 2520 60  0000 R CNN
+F 1 "MOSFET_N" H 6360 2100 60  0000 R CNN
+F 2 "" H 6300 2350 60  0001 C CNN
+F 3 "" H 6300 2350 60  0000 C CNN
+	1    6300 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L LTV-846S U25
+U 1 1 558B7746
+P 4600 2650
+F 0 "U25" H 4750 2850 50  0000 L CNN
+F 1 "LTV-846S" H 4400 1600 50  0000 L CNN
+F 2 "Housings_DIP:DIP-16_W7.62mm_LongPads" H 3850 1400 50  0001 L CIN
+F 3 "" H 4600 2650 50  0000 L CNN
+	1    4600 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R86
+U 1 1 558B77ED
+P 3850 2550
+F 0 "R86" V 3930 2550 50  0000 C CNN
+F 1 "R" V 3850 2550 50  0000 C CNN
+F 2 "" V 3780 2550 30  0001 C CNN
+F 3 "" H 3850 2550 30  0000 C CNN
+	1    3850 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L R R87
+U 1 1 558B786C
+P 3850 2850
+F 0 "R87" V 3930 2850 50  0000 C CNN
+F 1 "R" V 3850 2850 50  0000 C CNN
+F 2 "" V 3780 2850 30  0001 C CNN
+F 3 "" H 3850 2850 30  0000 C CNN
+	1    3850 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR66
+U 1 1 558B7946
+P 4150 4000
+F 0 "#PWR66" H 4150 3750 50  0001 C CNN
+F 1 "GND" H 4150 3850 50  0000 C CNN
+F 2 "" H 4150 4000 60  0000 C CNN
+F 3 "" H 4150 4000 60  0000 C CNN
+	1    4150 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 2750 4150 2750
+Wire Wire Line
+	4150 2750 4150 4000
+Wire Wire Line
+	4000 2850 4300 2850
+Wire Wire Line
+	4000 2550 4300 2550
+Text HLabel 3500 2550 0    60   Input ~ 0
+RELAY1
+Text HLabel 3500 2850 0    60   Input ~ 0
+RELAY2
+Wire Wire Line
+	3500 2550 3700 2550
+Wire Wire Line
+	3500 2850 3700 2850
+$Comp
+L MOSFET_N Q2
+U 1 1 558B7E9D
+P 6300 2950
+F 0 "Q2" H 6210 3120 60  0000 R CNN
+F 1 "MOSFET_N" H 6360 2700 60  0000 R CNN
+F 2 "" H 6300 2950 60  0001 C CNN
+F 3 "" H 6300 2950 60  0000 C CNN
+	1    6300 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR67
+U 1 1 558B8338
+P 5050 4100
+F 0 "#PWR67" H 5050 3850 50  0001 C CNN
+F 1 "GND" H 5050 3950 50  0000 C CNN
+F 2 "" H 5050 4100 60  0000 C CNN
+F 3 "" H 5050 4100 60  0000 C CNN
+	1    5050 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2750 5050 4100
+Wire Wire Line
+	4900 3050 5050 3050
+Wire Wire Line
+	4900 2750 5050 2750
+Connection ~ 5050 3050
+Wire Wire Line
+	6400 3150 6750 3150
+Wire Wire Line
+	6400 2550 6750 2550
+Connection ~ 6750 3150
+Wire Wire Line
+	4900 2650 5350 2650
+Wire Wire Line
+	5350 2650 5350 2350
+Wire Wire Line
+	5350 2350 6100 2350
+Wire Wire Line
+	4900 2950 6100 2950
+$Comp
+L +12V #PWR68
+U 1 1 558B89FD
+P 5300 1650
+F 0 "#PWR68" H 5300 1500 50  0001 C CNN
+F 1 "+12V" H 5300 1790 50  0000 C CNN
+F 2 "" H 5300 1650 60  0000 C CNN
+F 3 "" H 5300 1650 60  0000 C CNN
+	1    5300 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R89
+U 1 1 558B8A57
+P 5500 2750
+F 0 "R89" V 5580 2750 50  0000 C CNN
+F 1 "R" V 5500 2750 50  0000 C CNN
+F 2 "" V 5430 2750 30  0001 C CNN
+F 3 "" H 5500 2750 30  0000 C CNN
+	1    5500 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R88
+U 1 1 558B8C82
+P 5500 2050
+F 0 "R88" V 5580 2050 50  0000 C CNN
+F 1 "R" V 5500 2050 50  0000 C CNN
+F 2 "" V 5430 2050 30  0001 C CNN
+F 3 "" H 5500 2050 30  0000 C CNN
+	1    5500 2050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5300 1900 5500 1900
+Wire Wire Line
+	5300 2600 5500 2600
+Connection ~ 5300 1900
+Connection ~ 5300 2600
+Wire Wire Line
+	5500 2900 5500 2950
+Connection ~ 5500 2950
+$Comp
+L CONN_01X02 P10
+U 1 1 558B9007
+P 7400 2150
+F 0 "P10" H 7400 2300 50  0000 C CNN
+F 1 "RELAY1" V 7500 2150 50  0000 C CNN
+F 2 "" H 7400 2150 60  0001 C CNN
+F 3 "" H 7400 2150 60  0000 C CNN
+	1    7400 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P11
+U 1 1 558B90C4
+P 7400 2850
+F 0 "P11" H 7400 3000 50  0000 C CNN
+F 1 "RELAY2" V 7500 2850 50  0000 C CNN
+F 2 "" H 7400 2850 60  0001 C CNN
+F 3 "" H 7400 2850 60  0000 C CNN
+	1    7400 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR70
+U 1 1 558B9386
+P 7000 1800
+F 0 "#PWR70" H 7000 1650 50  0001 C CNN
+F 1 "+12V" H 7000 1940 50  0000 C CNN
+F 2 "" H 7000 1800 60  0000 C CNN
+F 3 "" H 7000 1800 60  0000 C CNN
+	1    7000 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 2100 7200 2100
+Wire Wire Line
+	7000 2800 7200 2800
+Connection ~ 7000 2100
+Connection ~ 7000 2800
+Wire Wire Line
+	6400 2750 6900 2750
+Wire Wire Line
+	6900 2750 6900 2900
+Wire Wire Line
+	6900 2900 7200 2900
+Wire Wire Line
+	6400 2150 7100 2150
+Wire Wire Line
+	7100 2150 7100 2200
+Wire Wire Line
+	7100 2200 7200 2200
+Wire Wire Line
+	4300 3050 4150 3050
+Connection ~ 4150 3050
+NoConn ~ 4300 3150
+NoConn ~ 4300 3350
+NoConn ~ 4300 3450
+NoConn ~ 4300 3650
+NoConn ~ 4900 3250
+NoConn ~ 4900 3350
+NoConn ~ 4900 3550
+NoConn ~ 4900 3650
+$Comp
+L GND #PWR69
+U 1 1 558D4879
+P 6750 3900
+F 0 "#PWR69" H 6750 3650 50  0001 C CNN
+F 1 "GND" H 6750 3750 50  0000 C CNN
+F 2 "" H 6750 3900 60  0000 C CNN
+F 3 "" H 6750 3900 60  0000 C CNN
+	1    6750 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 2550 6750 3900
+Wire Wire Line
+	7000 1800 7000 2800
+Wire Wire Line
+	5300 1650 5300 2600
+Wire Wire Line
+	5500 2200 5500 2350
+Connection ~ 5500 2350
+$EndSCHEMATC
